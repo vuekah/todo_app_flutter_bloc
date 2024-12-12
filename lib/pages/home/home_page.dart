@@ -26,6 +26,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((c) {
+      BlocProvider.of<HomeBloc>(context).fetchTodos();
+    BlocProvider.of<HomeBloc>(context).fetchCompletedTodos();
+    });
     super.initState();
   }
 
@@ -197,7 +201,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget todoListContainer(BuildContext context) {
-    BlocProvider.of<HomeBloc>(context).fetchTodos();
     return Container(
       padding: const EdgeInsets.all(8),
       width: Dimens.screenWidth,
@@ -253,7 +256,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget completedListContainer(BuildContext context) {
-    BlocProvider.of<HomeBloc>(context).fetchCompletedTodos();
     return Container(
       padding: const EdgeInsets.all(8),
       width: Dimens.screenWidth,

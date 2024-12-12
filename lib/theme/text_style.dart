@@ -3,7 +3,7 @@ import 'package:todo_app_flutter_bloc/theme/color_style.dart';
 import 'package:todo_app_flutter_bloc/gen/fonts.gen.dart';
 class MyAppStyles {
   static const titleAppbarTextStyle = TextStyle(
-      fontWeight: FontWeight.w700, fontSize: 17, fontFamily: FontFamily.inter);
+      fontWeight: FontWeight.w700,color: MyAppColors.whiteColor, fontSize: 17, fontFamily: FontFamily.inter);
   static const titleButtonTextStyle = TextStyle(
     fontWeight: FontWeight.w700,
     color: MyAppColors.whiteColor,

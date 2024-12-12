@@ -315,7 +315,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                   ),
                 ),
                 backgroundColor: MyAppColors.transparentColor,
-                title: Text(AppLocalizations.of(context)!.addNewTask),
+                title: Text(AppLocalizations.of(context)!.addNewTask,style: MyAppStyles.titleAppbarTextStyle,),
               ),
             ),
           ],
